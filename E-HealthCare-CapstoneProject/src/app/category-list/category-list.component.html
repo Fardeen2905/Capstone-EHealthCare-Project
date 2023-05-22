@@ -1,0 +1,37 @@
+<h3>{{ title }}</h3>
+
+<br />
+
+<a routerLink="/category-add" class="btn btn-success">Add New Item</a>
+
+<br /><br />
+
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <!-- <th>S.No.</th> -->
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>AddedDate</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of categoryitems; let i = index">
+      <!-- <td>{{i + 1}}</td> -->
+      <td>{{ m.categoryId }}</td>
+      <td>{{ m.categoryName }}</td>
+      <td>{{ m.categoryDescription }}</td>
+      <td>{{ m.categoryAddedDate }}</td>
+      <td>
+        <a
+          [routerLink]="['/category-details', m.categoryId]"
+          class="btn btn-secondary"
+        >
+          View Details</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

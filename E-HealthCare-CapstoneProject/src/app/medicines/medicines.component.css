@@ -1,0 +1,41 @@
+button{
+    margin: 0px 3px;
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+}
+img{
+    transition: transform 0.2s ease-in;
+}
+
+img:hover{
+    transform: scale(0.9);
+}
+
+/* h3.title{
+    background-color:green;
+    text-align: center;
+    padding: 8px;
+    margin: 0px 350px;
+    margin-bottom: 40px;
+    border : 7px double white;
+    border-radius: 10px;
+    color: white;
+} */
+
+.searchdiv {
+    margin-left: 450px;
+    margin-bottom: 50px;
+    padding:20px;
+  
+  }
+
+  .added{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

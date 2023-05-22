@@ -1,0 +1,43 @@
+<h3>{{ title }}</h3>
+
+<br />
+
+<a routerLink="/medicine-add" class="btn btn-success">Add New Item</a>
+
+<br /><br />
+
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+    
+      <th>Id</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Category</th>
+      <th>AddedDate</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of medicineitems; let i = index">
+      <!-- <td>{{i + 1}}</td> -->
+      <td>{{ m.medicineId }}</td>
+      <td>{{ m.medicineName }}</td>
+      <td><img src="{{ m.image }}" alt="" width="50px" height="50px" /></td>
+      <td>{{ m.price }}</td>
+      <td>{{ m.availableQuantity }}</td>
+      <td>{{ m.categoryId }}</td>
+      <td>{{ m.medicineAddedDate }}</td>
+      <td>
+        <a
+          [routerLink]="['/medicine-details', m.medicineId]"
+          class="btn btn-secondary"
+        >
+          View Details</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
